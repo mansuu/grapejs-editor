@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="44" viewBox="0 0 90 44">
+    <g data-name="Group 13515">
+        <g data-name="Rectangle 2349" style="stroke:#e6e6e6;fill:#f8f8f8;opacity:.654">
+            <path style="stroke:none" d="M0 0h90v44H0z"/>
+            <path style="fill:none" d="M.5.5h89v43H.5z"/>
+        </g>
+        <g data-name="Rectangle 2359" style="fill:#e6e6e6;stroke:#e6e6e6">
+            <path style="stroke:none" d="M0 0h40v37H0z" transform="translate(4 4)"/>
+            <path style="fill:none" d="M.5.5h39v36H.5z" transform="translate(4 4)"/>
+        </g>
+        <g data-name="Rectangle 2360" style="fill:#e6e6e6;stroke:#e6e6e6">
+            <path style="stroke:none" d="M0 0h40v37H0z" transform="translate(46 4)"/>
+            <path style="fill:none" d="M.5.5h39v36H.5z" transform="translate(46 4)"/>
+        </g>
+    </g>
+</svg>

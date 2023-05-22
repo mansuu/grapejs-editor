@@ -10,10 +10,11 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
+    "grapesjs-editor": "file:..",
     "react": "file:../node_modules/react",
+    "react-bootstrap": "^1.3.0",
     "react-dom": "file:../node_modules/react-dom",
-    "react-scripts": "file:../node_modules/react-scripts",
-    "grapesjs-editor": "file:.."
+    "react-scripts": "file:../node_modules/react-scripts"
   },
   "devDependencies": {
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
@@ -28,3 +29,4 @@
     "not op_mini all"
   ]
 }
+

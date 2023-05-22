@@ -1,15 +1,18 @@
 {
-  "name": "grapesjs-editor",
+  "name": "next-grapesjs-editor",
   "version": "1.0.0",
   "description": "Made with create-react-library",
   "author": "",
   "license": "MIT",
-  "repository": "/grapesjs-editor",
+  "repository": "https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/next-grapesjs-editor",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
   "engines": {
     "node": ">=10"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.git-codecommit.ap-south-1.amazonaws.com"
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
@@ -21,7 +24,8 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "eject": "react-scripts eject"
   },
   "peerDependencies": {
     "react": "^16.0.0"
@@ -49,5 +53,12 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "grapesjs": "^0.21.1",
+    "grapesjs-preset-newsletter": "^1.0.1",
+    "less": "^4.1.3",
+    "node-sass": "^8.0.0",
+    "react-bootstrap": "^1.3.0"
+  }
 }

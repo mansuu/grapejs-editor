@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g data-name="Group 14363">
+        <path data-name="Path 11920" d="M15.5 20a1 1 0 1 0 1 1 1 1 0 0 0-1-1z" transform="translate(-7.5 -9.333)" style="fill:#034ea2"/>
+        <path data-name="Rectangle 3639" transform="translate(7.333 3.333)" style="fill:#034ea2" d="M0 0h1.333v6H0z"/>
+        <path data-name="Path 11921" d="M18.667 20H5.333A1.335 1.335 0 0 1 4 18.667V5.333A1.335 1.335 0 0 1 5.333 4h13.334A1.335 1.335 0 0 1 20 5.333v13.334A1.335 1.335 0 0 1 18.667 20zM5.333 5.333v13.334h13.334V5.333z" style="fill:#034ea2" transform="translate(-4 -4)"/>
+    </g>
+</svg>
