@@ -4,15 +4,11 @@
   "description": "Made with create-react-library",
   "author": "",
   "license": "MIT",
-  "repository": "https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/next-grapesjs-editor",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
   "engines": {
     "node": ">=10"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.git-codecommit.ap-south-1.amazonaws.com/next-grapesjs-editor"
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
