@@ -2,13 +2,13 @@ import grapesjs from 'grapesjs'
 import grapejsPresetNewsletterPlugin from 'grapesjs-preset-newsletter'
 // import '../styles/home.css'
 
-import { defaultBlocks, getBlock, styleManager } from './editorUtils'
+import { defaultBlocks, styleManager } from './editorUtils'
 
 function getGrapeJsEditor(dataOnLoad, blocks) {
-  let blockIds = []
-  blocks.forEach((block) => {
-    blockIds = blockIds.concat(block.name)
-  })
+  // let blockIds = []
+  // blocks.forEach((block) => {
+  //   blockIds = blockIds.concat(block.name)
+  // })
 
   const editor = grapesjs.init({
     container: '#gjsEditor',
@@ -37,13 +37,13 @@ function getGrapeJsEditor(dataOnLoad, blocks) {
       // 'gjs-blocks-basic',
       (editor) =>
         grapejsPresetNewsletterPlugin(editor, {
-          blocks: blockIds,
-          block: (id) => {
-            const block = blocks.find((block) => {
-              return block.name === id
-            })
-            return getBlock(block.name, block.icon)
-          },
+          // blocks: blockIds,
+          // block: (id) => {
+          //   const block = blocks.find((block) => {
+          //     return block.name === id
+          //   })
+          //   return getBlock(block.name, block.icon)
+          // },
           // blocks: blocks,
           updateStyleManager: true
         })
@@ -194,9 +194,9 @@ function getGrapeJsEditor(dataOnLoad, blocks) {
   editor.on('load', function () {
     editor.runCommand('sw-visibility')
   })
-  editor.on('component:selected', function (e) {
-    console.log(e)
-  })
+  // editor.on('component:selected', function (e) {
+  //   console.log(e)
+  // })
   editor.Panels.getPanel('commands').set('visible', false)
   editor.Panels.getPanel('devices-c').set('visible', false)
   editor.Panels.getPanel('options').set('visible', false)
