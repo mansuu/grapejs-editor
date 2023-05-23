@@ -148,9 +148,9 @@ function getGrapeJsEditor(dataOnLoad, blocks) {
   // })
 
   // Show guides
-  editor.Commands.add('visibility', {
-    run: (editor) => editor.runCommand('sw-visibility')
-  })
+  // editor.Commands.add('visibility', {
+  //   run: (editor) => editor.runCommand('sw-visibility')
+  // })
 
   editor.Storage.add('remote', {
     async load() {
@@ -191,9 +191,9 @@ function getGrapeJsEditor(dataOnLoad, blocks) {
       // })
     }
   })
-  editor.on('load', function () {
-    editor.runCommand('sw-visibility')
-  })
+  // editor.on('load', function () {
+  //   editor.runCommand('sw-visibility')
+  // })
   editor.on('component:selected', function (e) {
     console.log(e)
   })
