@@ -2,7 +2,7 @@
   "name": "next-grapesjs-editor",
   "version": "1.0.0",
   "description": "Made with create-react-library",
-  "author": "",
+  "author": " ",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
