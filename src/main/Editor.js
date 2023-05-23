@@ -36,7 +36,7 @@ const Editor = (props) => {
   // const drag = (type, data, e) => {
   //   e.dataTransfer.setData(type, data)
   // }
-
+  console.log('editor', editor)
   const getStylizedModuleInfo = () => {
     // const createdDate = stylizedModuleInfo?.createdDateTime
     //   ? new Date(stylizedModuleInfo?.createdDateTime)
