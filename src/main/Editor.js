@@ -9,7 +9,7 @@ import RightPanel from './RightPanel'
 // import '../styles/home.css'
 
 const Editor = (props) => {
-  const { eventEmitters, inlineStyles, dataOnLoad } = props
+  const { eventEmitters, blocks, inlineStyles, dataOnLoad } = props
   const [editor, setEditor] = useState(null)
   // eslint-disable-next-line no-unused-vars
   const [data, setData] = useState(undefined)
@@ -23,7 +23,7 @@ const Editor = (props) => {
   const [stylizedModule, setStylizedModule] = useState(undefined)
 
   useEffect(() => {
-    const editor = geditorConfig(dataOnLoad)
+    const editor = geditorConfig(dataOnLoad, blocks)
 
     setEditor(editor)
     document.body.style.backgroundColor = '#f3f6fa'
