@@ -26,7 +26,7 @@ const Editor = (props) => {
     const editor = geditorConfig(dataOnLoad, blocks)
 
     setEditor(editor)
-    document.body.style.backgroundColor = '#f3f6fa'
+    // document.body.style.backgroundColor = '#f3f6fa'
   }, [])
 
   // const openPanel = () => {
@@ -36,106 +36,106 @@ const Editor = (props) => {
   // const drag = (type, data, e) => {
   //   e.dataTransfer.setData(type, data)
   // }
-  console.log('editor', editor)
-  const getStylizedModuleInfo = () => {
-    // const createdDate = stylizedModuleInfo?.createdDateTime
-    //   ? new Date(stylizedModuleInfo?.createdDateTime)
-    //   : new Date()
-    // const editedDate = stylizedModuleInfo?.upatedDateTime
-    //   ? new Date(stylizedModuleInfo?.upatedDateTime)
-    //   : new Date()
-    // return {
-    //   createdDate: moment(createdDate).format('MM/DD/YYYY'),
-    //   createdBy: stylizedModuleInfo?.cretedByname || getCurrentUser(),
-    //   editedDate: moment(editedDate).format('MM/DD/YYYY'),
-    //   editedBy: stylizedModuleInfo?.updatedByname || getCurrentUser()
-    // }
-  }
+  // console.log('editor', editor)
+  // const getStylizedModuleInfo = () => {
+  //   // const createdDate = stylizedModuleInfo?.createdDateTime
+  //   //   ? new Date(stylizedModuleInfo?.createdDateTime)
+  //   //   : new Date()
+  //   // const editedDate = stylizedModuleInfo?.upatedDateTime
+  //   //   ? new Date(stylizedModuleInfo?.upatedDateTime)
+  //   //   : new Date()
+  //   // return {
+  //   //   createdDate: moment(createdDate).format('MM/DD/YYYY'),
+  //   //   createdBy: stylizedModuleInfo?.cretedByname || getCurrentUser(),
+  //   //   editedDate: moment(editedDate).format('MM/DD/YYYY'),
+  //   //   editedBy: stylizedModuleInfo?.updatedByname || getCurrentUser()
+  //   // }
+  // }
 
-  const exportModule = (exportTypes, callback) => {
-    //   setIsloading(true)
-    //   exportTypes.forEach((type, index) => {
-    //     const fileName =
-    //       moduleData.module.moduleName +
-    //       '_' +
-    //       capitalizeString(options[selectedOption]) +
-    //       '_' +
-    //       'Stylizedmodule'
-    //     const extension = `.${type.toLowerCase()}`
-    //     const payload = {
-    //       type: type,
-    //       fileName: fileName + extension,
-    //       html: `<!DOCTYPE html> <html><head>
-    // <meta http-equiv='Content-Type' content='text/html charset=UTF-8' />
-    // <meta name='format-detection' content='telephone=no' />
-    // <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
-    // </head>${editor.runCommand('gjs-get-inlined-html')}</html>`
-    //     }
-    //     exportStylizedModule(payload, (res, err) => {
-    //       setIsloading(false)
-    //       if (res) {
-    //         if (type.toLowerCase() === 'pdf') {
-    //           downloadPdfFromByteArray([res.data], fileName)
-    //         }
-    //         if (type.toLowerCase() === 'html') {
-    //           var file = new File(['\ufeff' + res.data], fileName + extension, {
-    //             type: 'text/plain:charset=UTF-8'
-    //           })
-    //           //create a ObjectURL in order to download the created file
-    //           const url = window.URL.createObjectURL(file)
-    //           //create a hidden link and set the href and click it
-    //           var a = document.createElement('a')
-    //           a.style = 'display: none'
-    //           a.href = url
-    //           a.download = file.name
-    //           a.click()
-    //           window.URL.revokeObjectURL(url)
-    //         }
-    //       }
-    //       if (index === exportTypes.length - 1) {
-    //         callback()
-    //       }
-    //       if (err) {
-    //         showError(err.response && err.response.status)
-    //       }
-    //     })
-    //   })
-  }
+  // const exportModule = (exportTypes, callback) => {
+  //   //   setIsloading(true)
+  //   //   exportTypes.forEach((type, index) => {
+  //   //     const fileName =
+  //   //       moduleData.module.moduleName +
+  //   //       '_' +
+  //   //       capitalizeString(options[selectedOption]) +
+  //   //       '_' +
+  //   //       'Stylizedmodule'
+  //   //     const extension = `.${type.toLowerCase()}`
+  //   //     const payload = {
+  //   //       type: type,
+  //   //       fileName: fileName + extension,
+  //   //       html: `<!DOCTYPE html> <html><head>
+  //   // <meta http-equiv='Content-Type' content='text/html charset=UTF-8' />
+  //   // <meta name='format-detection' content='telephone=no' />
+  //   // <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
+  //   // </head>${editor.runCommand('gjs-get-inlined-html')}</html>`
+  //   //     }
+  //   //     exportStylizedModule(payload, (res, err) => {
+  //   //       setIsloading(false)
+  //   //       if (res) {
+  //   //         if (type.toLowerCase() === 'pdf') {
+  //   //           downloadPdfFromByteArray([res.data], fileName)
+  //   //         }
+  //   //         if (type.toLowerCase() === 'html') {
+  //   //           var file = new File(['\ufeff' + res.data], fileName + extension, {
+  //   //             type: 'text/plain:charset=UTF-8'
+  //   //           })
+  //   //           //create a ObjectURL in order to download the created file
+  //   //           const url = window.URL.createObjectURL(file)
+  //   //           //create a hidden link and set the href and click it
+  //   //           var a = document.createElement('a')
+  //   //           a.style = 'display: none'
+  //   //           a.href = url
+  //   //           a.download = file.name
+  //   //           a.click()
+  //   //           window.URL.revokeObjectURL(url)
+  //   //         }
+  //   //       }
+  //   //       if (index === exportTypes.length - 1) {
+  //   //         callback()
+  //   //       }
+  //   //       if (err) {
+  //   //         showError(err.response && err.response.status)
+  //   //       }
+  //   //     })
+  //   //   })
+  // }
 
-  const runEditorCommand = (command, exportTypes, callback) => {
-    switch (command) {
-      case 'saveDb':
-        editor.runCommand('saveDb')
-        break
-      case 'undo':
-        editor.runCommand('undo')
-        break
-      case 'redo':
-        editor.runCommand('redo')
-        break
-      case 'export':
-        exportModule(exportTypes, () => {
-          callback()
-        })
-        break
-      case 'preview':
-        setStylizedModule(editor.runCommand('gjs-get-inlined-html'))
-        break
-      case 'info':
-        return getStylizedModuleInfo()
-      case 'publish':
-        break
-      case 'close':
-        break
-      default:
-        break
-    }
-  }
+  // const runEditorCommand = (command, exportTypes, callback) => {
+  //   switch (command) {
+  //     case 'saveDb':
+  //       editor.runCommand('saveDb')
+  //       break
+  //     case 'undo':
+  //       editor.runCommand('undo')
+  //       break
+  //     case 'redo':
+  //       editor.runCommand('redo')
+  //       break
+  //     case 'export':
+  //       exportModule(exportTypes, () => {
+  //         callback()
+  //       })
+  //       break
+  //     case 'preview':
+  //       setStylizedModule(editor.runCommand('gjs-get-inlined-html'))
+  //       break
+  //     case 'info':
+  //       return getStylizedModuleInfo()
+  //     case 'publish':
+  //       break
+  //     case 'close':
+  //       break
+  //     default:
+  //       break
+  //   }
+  // }
 
   return (
     <div className='container-fluid p-0' style={{ backgroundColor: 'f3f6fa' }}>
       <TopPanel
-        runCommand={runEditorCommand}
+        // runCommand={runEditorCommand}
         editor={editor}
         eventEmitters={eventEmitters}
         inlineStyles={inlineStyles}
