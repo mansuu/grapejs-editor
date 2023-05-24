@@ -26,7 +26,7 @@ const Editor = (props) => {
     const editor = geditorConfig(dataOnLoad, blocks)
 
     setEditor(editor)
-    // document.body.style.backgroundColor = '#f3f6fa'
+    document.body.style.backgroundColor = '#f3f6fa'
   }, [])
 
   // const openPanel = () => {

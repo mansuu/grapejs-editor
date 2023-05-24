@@ -2,13 +2,13 @@ import grapesjs from 'grapesjs'
 import grapejsPresetNewsletterPlugin from 'grapesjs-preset-newsletter'
 // import '../styles/home.css'
 
-import { styleManager } from './editorUtils'
+import { getBlock, styleManager } from './editorUtils'
 
 function getGrapeJsEditor(dataOnLoad, blocks) {
-  // let blockIds = []
-  // blocks.forEach((block) => {
-  //   blockIds = blockIds.concat(block.name)
-  // })
+  let blockIds = []
+  blocks.forEach((block) => {
+    blockIds = blockIds.concat(block.name)
+  })
 
   const editor = grapesjs.init({
     container: '#gjsEditor',
@@ -37,13 +37,13 @@ function getGrapeJsEditor(dataOnLoad, blocks) {
       // 'gjs-blocks-basic',
       (editor) =>
         grapejsPresetNewsletterPlugin(editor, {
-          // blocks: blockIds,
-          // block: (id) => {
-          //   const block = blocks.find((block) => {
-          //     return block.name === id
-          //   })
-          //   return getBlock(block.name, block.icon)
-          // },
+          blocks: blockIds,
+          block: (id) => {
+            const block = blocks.find((block) => {
+              return block.name === id
+            })
+            return getBlock(block.name, block.icon)
+          },
           // blocks: blocks,
           updateStyleManager: true
         })
@@ -65,53 +65,53 @@ function getGrapeJsEditor(dataOnLoad, blocks) {
     }
   })
 
-  // const updateText = document.getElementsByClassName('gjs-toolbar')
-  // const changeText = document.getElementsByClassName(
-  //   'gjs-rte-toolbar gjs-one-bg'
-  // )
+  const updateText = document.getElementsByClassName('gjs-toolbar')
+  const changeText = document.getElementsByClassName(
+    'gjs-rte-toolbar gjs-one-bg'
+  )
 
-  // editor.on('rte:enable', () => {
-  //   if (changeText && changeText[0]) {
-  //     updateText[0].style.display = 'none'
-  //   }
-  // })
+  editor.on('rte:enable', () => {
+    if (changeText && changeText[0]) {
+      updateText[0].style.display = 'none'
+    }
+  })
 
-  // editor.on('rte:disable', () => {
-  //   if (updateText && updateText[0]) {
-  //     updateText[0].style.display = 'block'
-  //   }
-  // })
+  editor.on('rte:disable', () => {
+    if (updateText && updateText[0]) {
+      updateText[0].style.display = 'block'
+    }
+  })
 
-  // editor.RichTextEditor.add('orderedList', {
-  //   icon: '',
-  //   attributes: { title: 'Ordered List', class: 'gjs-rte-action ordered-list' },
-  //   result: (rte) => {
-  //     const rteEl = editor.RichTextEditor.getToolbarEl()
-  //     rteEl.firstChild.childNodes.forEach((child, idx) => {})
-  //     rte.exec('insertOrderedList')
-  //   }
-  // })
+  editor.RichTextEditor.add('orderedList', {
+    icon: '',
+    attributes: { title: 'Ordered List', class: 'gjs-rte-action ordered-list' },
+    result: (rte) => {
+      const rteEl = editor.RichTextEditor.getToolbarEl()
+      rteEl.firstChild.childNodes.forEach((child, idx) => {})
+      rte.exec('insertOrderedList')
+    }
+  })
 
-  // editor.RichTextEditor.add('unorderedList', {
-  //   icon: '',
-  //   attributes: {
-  //     title: 'Unordered List',
-  //     class: 'gjs-rte-action unordered-list'
-  //   },
-  //   result: (rte) => rte.exec('insertUnorderedList')
-  // })
+  editor.RichTextEditor.add('unorderedList', {
+    icon: '',
+    attributes: {
+      title: 'Unordered List',
+      class: 'gjs-rte-action unordered-list'
+    },
+    result: (rte) => rte.exec('insertUnorderedList')
+  })
 
-  // editor.RichTextEditor.add('superscript', {
-  //   icon: '<b>S<sup>s</sup></b>',
-  //   attributes: { title: 'Superscript' },
-  //   result: (rte) => rte.exec('superscript')
-  // })
+  editor.RichTextEditor.add('superscript', {
+    icon: '<b>S<sup>s</sup></b>',
+    attributes: { title: 'Superscript' },
+    result: (rte) => rte.exec('superscript')
+  })
 
-  // editor.RichTextEditor.add('subscript', {
-  //   icon: '<b>S<sub>s</sub></b>',
-  //   attributes: { title: 'Subscript' },
-  //   result: (rte) => rte.exec('subscript')
-  // })
+  editor.RichTextEditor.add('subscript', {
+    icon: '<b>S<sub>s</sub></b>',
+    attributes: { title: 'Subscript' },
+    result: (rte) => rte.exec('subscript')
+  })
 
   editor.Commands.add('set-device-desktop', {
     run: (editor) => editor.setDevice('Desktop')
